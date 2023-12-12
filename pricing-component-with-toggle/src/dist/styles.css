@@ -19,7 +19,7 @@
 body {
   position: relative;
   font-family: var(--ff-body);
-  background: var(--clr-100) url(/images/bg-top.svg);
+  background: var(--clr-100) url(/pricing-component-with-toggle/images/bg-top.svg);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: top -1.8rem right -10.55rem;
@@ -120,7 +120,7 @@ main {
 @media only screen and (min-width: 76.25rem) {
   body {
     position: relative;
-    background: var(--clr-100) url(/images/bg-top.svg);
+    background: var(--clr-100) url(/pricing-component-with-toggle/images/bg-top.svg);
     background-size: 27%;
     background-repeat: no-repeat;
     background-position: top right -3rem;
@@ -134,7 +134,7 @@ main {
     bottom: 0;
     width: 100%;
     height: 100%;
-    background: url(/images/bg-bottom.svg);
+    background: url(/pricing-component-with-toggle/images/bg-bottom.svg);
     background-size: 27%;
     background-repeat: no-repeat;
     background-position: bottom -4rem left;
@@ -203,8 +203,8 @@ header .toggle_price_button .toggle .circle.toggled {
   gap: 2rem;
 }
 .price__containers .flex_container :not(:nth-child(2)) .features p:not(:nth-child(2)) {
-  border-top: 1px solid hsl(234, 14%, 74%);
-  border-bottom: 1px solid var(--clr-200);
+  border-top: 1px solid hsla(234, 14%, 74%, 0.681);
+  border-bottom: 1px solid hsla(234, 14%, 74%, 0.681);
 }
 .price__containers .flex_container .card {
   display: flex;
@@ -216,6 +216,7 @@ header .toggle_price_button .toggle .circle.toggled {
   padding: 2rem;
   border-radius: 0.5rem;
   background-color: var(--clr-100);
+  background-color: white;
   box-shadow: 1px 1px 30px hsla(234, 13%, 49%, 0.205);
 }
 .price__containers .flex_container .card > * {
@@ -230,7 +231,7 @@ header .toggle_price_button .toggle .circle.toggled {
   margin-bottom: 1rem;
 }
 .price__containers .flex_container .card .price {
-  font-size: 3.5rem;
+  font-size: 4rem;
   color: var(--clr-400);
 }
 .price__containers .flex_container .card .features {
@@ -247,7 +248,7 @@ header .toggle_price_button .toggle .circle.toggled {
   border: 0;
   background-color: transparent;
   width: 100%;
-  padding-block: 1rem;
+  padding-block: 0.8rem;
   margin-top: 2rem;
   border-radius: 0.5rem;
   color: var(--clr-100);
