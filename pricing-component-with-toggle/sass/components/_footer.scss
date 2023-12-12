@@ -1,0 +1,13 @@
+@use '../abstracts/' as *;
+
+footer {
+  position: absolute;
+  @include d-flex();
+  bottom: 0;
+  text-align: center;
+
+  a {
+    font-weight: var(--fw-200);
+    color: hsl(237, 63%, 64%);
+  }
+}

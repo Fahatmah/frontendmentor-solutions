@@ -1,0 +1,312 @@
+:root {
+  --lg: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  --h-lg: linear-gradient(
+    to right,
+    hsla(236, 72%, 79%, 0.507),
+    hsla(237, 63%, 64%, 0.514)
+  );
+  --clr-100: hsl(240, 78%, 98%);
+  --clr-200: hsl(234, 14%, 74%);
+  --clr-300: hsl(233, 13%, 49%);
+  --clr-400: hsl(232, 13%, 33%);
+  --ff-montserrat: "Montserrat", sans-serif;
+  --fw-100: 400;
+  --fw-200: 700;
+  --ff-body: var(--ff-montserrat);
+  --debug: 1px solid #333;
+}
+
+body {
+  position: relative;
+  font-family: var(--ff-body);
+  background: var(--clr-100) url(/pricing-component-with-toggle/images/bg-top.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top -1.8rem right -10.55rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font: inherit;
+  text-decoration: none;
+  list-style: none;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+main {
+  width: min(100% - 2rem, 65rem);
+  margin-block: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+@media only screen and (min-width: 76.25rem) {
+  body {
+    position: relative;
+    background: var(--clr-100) url(/pricing-component-with-toggle/images/bg-top.svg);
+    background-size: 27%;
+    background-repeat: no-repeat;
+    background-position: top right -3rem;
+  }
+  body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: url(/pricing-component-with-toggle/images/bg-bottom.svg);
+    background-size: 27%;
+    background-repeat: no-repeat;
+    background-position: bottom -4rem left;
+  }
+}
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+header h1 {
+  text-transform: capitalize;
+  font-weight: var(--fw-200);
+  color: var(--clr-300);
+  font-size: 2rem;
+}
+header .toggle_price_button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+header .toggle_price_button .time_period {
+  text-transform: capitalize;
+  font-weight: calc(var(--fw-100) + 200);
+  color: var(--clr-200);
+}
+header .toggle_price_button .toggle {
+  position: relative;
+  display: inline-block;
+  width: 3.3rem;
+  height: 2rem;
+  border-radius: 2.5rem;
+  background: var(--lg);
+  cursor: pointer;
+}
+header .toggle_price_button .toggle:hover {
+  background: var(--h-lg);
+}
+header .toggle_price_button .toggle .circle {
+  background-color: var(--clr-100);
+  height: 1.6rem;
+  width: 1.6rem;
+  position: absolute;
+  top: 0.2rem;
+  right: 0.2rem;
+  border-radius: 50%;
+  transition: 0.5s ease-in-out;
+}
+header .toggle_price_button .toggle .circle.toggled {
+  left: 0.2rem;
+}
+
+.price__containers {
+  width: 100%;
+}
+.price__containers .flex_container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+.price__containers .flex_container :not(:nth-child(2)) .features p:not(:nth-child(2)) {
+  border-top: 1px solid hsla(234, 14%, 74%, 0.681);
+  border-bottom: 1px solid hsla(234, 14%, 74%, 0.681);
+}
+.price__containers .flex_container .card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  width: min(100% - 0rem, 26rem);
+  padding: 2rem;
+  border-radius: 0.5rem;
+  background-color: var(--clr-100);
+  background-color: white;
+  box-shadow: 1px 1px 30px hsla(234, 13%, 49%, 0.205);
+}
+.price__containers .flex_container .card > * {
+  width: 100%;
+}
+.price__containers .flex_container .card .level,
+.price__containers .flex_container .card .price {
+  font-weight: var(--fw-200);
+}
+.price__containers .flex_container .card .level {
+  color: var(--clr-300);
+  margin-bottom: 1rem;
+}
+.price__containers .flex_container .card .price {
+  font-size: 4rem;
+  color: var(--clr-400);
+}
+.price__containers .flex_container .card .features {
+  margin-block-start: 1.5rem;
+}
+.price__containers .flex_container .card .features p {
+  font-weight: var(--fw-200);
+  color: var(--clr-300);
+  width: 100%;
+  padding-block: 1rem;
+}
+.price__containers .flex_container .card button {
+  outline: 0;
+  border: 0;
+  background-color: transparent;
+  width: 100%;
+  padding-block: 0.8rem;
+  margin-top: 2rem;
+  border-radius: 0.5rem;
+  color: var(--clr-100);
+  text-transform: uppercase;
+  font-weight: var(--fw-200);
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+.price__containers .flex_container .card:nth-child(1) button, .price__containers .flex_container .card:nth-child(3) button {
+  background: var(--lg);
+}
+.price__containers .flex_container .card:nth-child(1) button:hover, .price__containers .flex_container .card:nth-child(3) button:hover {
+  background: transparent;
+  color: hsl(237, 63%, 64%);
+  outline: 1px solid hsl(237, 63%, 64%);
+}
+.price__containers .flex_container .card:nth-child(2) {
+  background: linear-gradient(to bottom, hsl(236, 72%, 79%) -60%, hsl(237, 63%, 64%));
+}
+.price__containers .flex_container .card:nth-child(2) .level,
+.price__containers .flex_container .card:nth-child(2) .price {
+  color: var(--clr-100);
+}
+.price__containers .flex_container .card:nth-child(2) .features p {
+  color: var(--clr-100);
+  border-top: 1px solid var(--clr-200);
+}
+.price__containers .flex_container .card:nth-child(2) .features p:nth-child(3) {
+  border-bottom: 1px solid var(--clr-200);
+}
+.price__containers .flex_container .card:nth-child(2) button {
+  color: hsl(237, 63%, 64%);
+  background-color: var(--clr-100);
+}
+.price__containers .flex_container .card:nth-child(2) button:hover {
+  background-color: transparent;
+  color: var(--clr-100);
+  outline: 1px solid var(--clr-100);
+}
+
+@media only screen and (min-width: 76.25rem) {
+  .price__containers .flex_container {
+    flex-direction: row;
+    gap: 0;
+  }
+  .price__containers .flex_container .card:nth-child(2) {
+    height: 480px;
+  }
+}
+footer {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: 0;
+  text-align: center;
+}
+footer a {
+  font-weight: var(--fw-200);
+  color: hsl(237, 63%, 64%);
+}/*# sourceMappingURL=styles.css.map */

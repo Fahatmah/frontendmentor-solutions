@@ -1,0 +1,10 @@
+@use 'abstracts/boilerplates';
+@use 'abstracts/breakpoints';
+@use 'abstracts/index';
+@use 'abstracts/resets';
+@use 'abstracts/utilities';
+
+@use 'components/main';
+@use 'components/header';
+@use 'components/pricing_containers';
+@use 'components/footer';

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <!-- tab icon -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png" />
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet" />
+    <!-- stylesheets -->
+    <link rel="stylesheet" href="/src/dist/styles.css" />
+    <!-- script -->
+    <script src="script.js" defer></script>
+    <!-- title -->
+    <title>Frontend Mentor | [Pricing Component]</title>
+  </head>
+  <body>
+    <main>
+      <!-- ====== header ===== -->
+      <header>
+        <h1>our pricing</h1>
+        <div class="toggle_price_button">
+          <p class="annually time_period">annually</p>
+          <label class="toggle" id="togglePrice">
+            <span class="circle"></span>
+          </label>
+          <p class="monthly time_period">monthly</p>
+        </div>
+      </header>
+      <!-- ====== end of header ===== -->
+      <!-- ====== price container ===== -->
+      <section class="price__containers">
+        <div class="flex_container">
+          <div class="card">
+            <p class="level">Basic</p>
+            <p class="price">&dollar;19.99</p>
+            <div class="features">
+              <p>500 GB Storage</p>
+              <p>2 Users Allowed</p>
+              <p>Send up to 3 GB</p>
+            </div>
+            <button>Learn More</button>
+          </div>
+          <div class="card">
+            <p class="level">Professional</p>
+            <p class="price">&dollar;24.99</p>
+            <div class="features">
+              <p>1 TB Storage</p>
+              <p>5 Users Allowed</p>
+              <p>Send up to 10 GB</p>
+            </div>
+            <button>Learn More</button>
+          </div>
+          <div class="card">
+            <p class="level">Master</p>
+            <p class="price">&dollar;39.99</p>
+            <div class="features">
+              <p>2 TB Storage</p>
+              <p>10 Users Allowed</p>
+              <p>Send up to 20 GB</p>
+            </div>
+            <button>Learn More</button>
+          </div>
+        </div>
+      </section>
+      <!-- ====== end of price container ===== -->
+    </main>
+      <footer>
+        <div class="attribution">
+          Challenge by
+          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+            >Frontend Mentor</a
+          >. Coded by <a href="https://www.frontendmentor.io/profile/Fahatmah">Fat</a>.
+        </div>
+      </footer>
+  </body>
+</html>
