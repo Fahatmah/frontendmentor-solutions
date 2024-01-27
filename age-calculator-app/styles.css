@@ -15,6 +15,7 @@
   --ff-poppins-reg: 'Poppins-Regular', sans-serif;
   --ff-poppins-bold: 'Poppins-Bold', sans-serif;
   --ff-poppins-extrabold: 'Poppins-ExtraBold', sans-serif;
+  --ff-poppins-italic: 'Poppins-Italic', sans-serif;
   --ff-poppins-extrabolditalic: 'Poppins-ExtraBoldItalic', sans-serif;
 
   --fs-def: 2rem; /* 32px */
@@ -41,6 +42,13 @@
   font-family: 'Poppins-ExtraBold';
   src: url('assets/fonts/Poppins-ExtraBold.ttf') format(truetype);
   font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins-Italic';
+  src: url('assets/fonts/Poppins-Italic.ttf') format(truetype);
+  font-weight: 400;
   font-style: normal;
 }
 
@@ -150,6 +158,8 @@ main {
   position: absolute;
   left: 0;
   bottom: -1.5rem;
+
+  font-family: var(--ff-poppins-italic);
   font-size: 0.5rem;
   color: var(--prm-clr-200);
 }
@@ -256,6 +266,10 @@ footer a {
 
   .input input {
     padding-inline: 1.3rem;
+  }
+
+  .input span.error-message {
+    font-size: 0.82rem;
   }
 
   .calculate-age-button {
